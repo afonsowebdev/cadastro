@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Francisco Afonso">
+    <meta name="description" content="Página para criar uma conta de estudante">
+    <link rel="stylesheet" href="assets/css/import.css">
+    <title>Criar Conta de Estudante</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Criar uma conta de estudante</h2>
+            <p>Preencha os campos abaixo para criar uma conta de estudante.</p>
+        </div>
+
+        <form action="" method="post">
+            <div class="input-group">
+                <label for="nome">Nome completo: <span class="required-field">*</span> </label>
+                <input type="text" name="nome" id="nome" class="block" placeholder="Digite seu nome completo" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">E-mail <span class="required-field">*</span> </label>
+                <input type="email" name="email" id="email" class="block" placeholder="exemplo@gmail.com" required>
+            </div>
+
+            <div class="input-group">
+                <label for="senha">Senha: <span class="required-field">*</span> </label>
+                <input type="password" name="senha" id="senha" class="block"
+                    placeholder="Define uma senha no máximo com 8 caracteres" minlength="8" maxlength="16" required>
+            </div>
+
+            <div class="input-group">
+                <label for="confirmar-senha">Confirmar senha: <span class="required-field">*</span> </label>
+                <input type="password" name="confirmar-senha" class="block" id="confirmar-senha"
+                    placeholder="Confirme sua senha" minlength="8" maxlength="16" required>
+            </div>
+
+            <div class="input-group">
+                <label for="data-nascimento">Data de nascimento: <span class="required-field">*</span> </label>
+                <input type="date" name="data-nascimento" class="block" id="data-nascimento" required>
+            </div>
+
+            <div class="input-group">
+                <label for="telefone">Telefone: </label>
+                <input type="tel" name="telefone" id="telefone" class="block" placeholder="(+XXX) XXX-XXX-XXX"
+                    pattern="\(\d{2}\) \d{5}-\d{4}" maxlength="13" title="Formato: +351 91 2345-678" required>
+            </div>
+
+            <div class="input-group">
+                <label for="candidatura">Nível a se candidatar:</label>
+                <select name="candidatura" id="candidatura" class="block" required>
+                    <option value="">Escolhe um nívle</option>
+                    <option value="licenciatura">Licenciatura</option>
+                    <option value="mestrado">Mestrado</option>
+                    <option value="doutorado">Doutorado</option>
+                    <option value="pos-graduacao">Pós-graduação</option>
+                    <option value="tecnico">Técnico</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="curso"> Curso: <span class="required-field">*</span></label>
+                <select name="curso" id="curso" class="block" required>
+                    <option value="">Escolhe um curso</option>
+                    <option value="engenharia">Engenharia Informática</option>
+                    <option value="medicina">Medicina Geral</option>
+                    <option value="direito">Direito</option>
+                    <option value="administracao">Administração</option>
+                    <option value="educacao">Educação básica</option>
+                    <option value="tecnologia-da-informacao">Tecnologia da Informação</option>
+                    <option value="artes">Artes</option>
+                    <option value="ciencias-sociais">Ciências Sociais</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="instituicao">Instituição: <span class="required-field">*</span></label>
+                <select name="instituicao" id="instituicao" class="block" required>
+                    <option value="">Escolhe uma instituição</option>
+                    <option value="universidade-x">Universidade de Leiria</option>
+                    <option value="universidade-y">Universidade de Macedo Cavalero</option>
+                    <option value="universidade-z">Universidade Central do Porto</option>
+                    <option value="instituto-a">Instituto Politécnico de Bragança</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="file">Carregue uma fotografia tipo passe:</label>
+                <input type="file" name="file" id="file" class="block" accept="image/*">
+            </div>
+
+            <div class="input-group">
+                <input type="checkbox" name="confterm" id="" required>
+                <label for="confterm">Li e concordo com os <a href="#">termos de uso</a> e a <a href="#">política de
+                        privacidade</a>.</label>
+            </div>
+
+            <input type="submit" value="Criar conta" class="submit-button">
+        </form>
+    </div>
+</body>
+
+</html>
